@@ -22,6 +22,7 @@ title: Wei Lim
 description: >- # this means to ignore newlines until "baseurl:"
   I'm Wei Lim, a software developer based in Seattle.
   I will be sharing my experiences on software.
+google_analytics: G-8N72EV4D7P
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: weikanglim.github.io
 url: https://weikanglim.github.io
