@@ -125,6 +125,6 @@ Finally, the real-world examples in this blogpost may not resonate with you. Thi
 
 <i>Footnote: I'm always looking for feedback and topics my readers might be interested in. If you'd like to contact me, my Twitter handle is [weikanglim](https://twitter.com/weikanglim).</i>
 
-References:
+Notes:
 
-<sup>1</sup> Mayo Oshin's Medium [blogpost](https://medium.com/the-mission/elon-musks-3-step-first-principles-thinking-how-to-think-and-solve-difficult-problems-like-a-ba1e73a9f6c0) - *Elon Musks' “3-Step” First Principles Thinking* comes to mind as an article that is excellent for a broader audience.
+<sup>1</sup> Mayo Oshin's Medium [blog post](https://medium.com/the-mission/elon-musks-3-step-first-principles-thinking-how-to-think-and-solve-difficult-problems-like-a-ba1e73a9f6c0) - *Elon Musks' “3-Step” First Principles Thinking* comes to mind as an article that is excellent for a broader audience.
