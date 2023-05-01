@@ -19,15 +19,17 @@ In philosophy or science, a first principle is defined strictly as a basic propo
 
 In math terms, a first principle is an axiom.
 
-In physics, first principles are the laws that govern the universe. These are laws that you cannot violate in the real world. If you happen to be a lucky person who can demonstrate a repeatable an experiment that shows otherwise, i.e., break the law of physics, congratulations -- scientists are now scrambling to figure out a proposal for a new law that is consistent with your experimental data. This doesn't happen very often, and you should pat yourself on the back since you've helped advance our understanding of our universe.
+In physics, first principles are the laws that govern the universe. These are laws that you cannot violate in the real world. If you happen to be a lucky person who can demonstrate a repeatable experiment that shows otherwise, i.e., break the law of physics, congratulations! Scientists are now scrambling to figure out a proposal for a new law that is consistent with your experimental data. This doesn't happen very often, and you should pat yourself on the back since you've helped advance our understanding of our universe.
 
 What exactly is first principles thinking then? While there are many different versions of the definition that exists, here's mine:
 
-First principles thinking is being able to understand the proven fundamental first principles in each problem space, building up new rules from there, and finally creating solutions or conclusions that are consistent with the first principles.
+First principles thinking is being able to understand the first principles (either confidently believed to be true or formally proven), in each problem space, building up rules from there, and finally creating solutions or conclusions that are consistent with the first principles.
 
 Scientists applies first principles thinking all the time without thinking about it since they live and breathe in their subject matter, and it comes natural to them. When scientists are able to think critically and apply the right amount of creativity to discovery new breakthroughs, I believe first principles thinking plays a large role here.
 
-A more well-known example is how innovators such as Elon Musk applies first principles thinking to decide whether a deeply complex problem that often requires significant amount of time, effort, and money is worth looking into. In a recent podcast #252 with Lex Fridman, Elon Musk describes first principles thinking as follows:
+A more well-known example is how innovators such as Elon Musk applies first principles thinking to decide whether a deeply complex problem that often requires significant amount of time, effort, and money is worth looking into.
+
+In a recent podcast #252 with Lex Fridman, Elon Musk describes first principles thinking as follows:
 
 > First principles analysis can be applied to really any walk of life. It involves just boiling down something to the most fundamental principles, the things we are most confident are true at a foundational level. That sets your axiomatic base, and then you reason up from there. And you cross check your conclusion with your axiomatic truth.
 
@@ -37,7 +39,9 @@ How it applies to a practical problem:
 
 >  Now then, you have to ask yourself, why is this part of the product is expensive? Is it something fundamentally foolish? Or is the volume too low? What if our volume was a million units a year? Would it still be expensive then? If it is, then there is something fundamentally flawed about the design.
 
-In a few sentences, Elon was able to provide a reasonable materials cost analysis with little effort. Most business leaders would have delegated this analysis to the experts, industrial manufacturing engineers after years of college and industry experience. The power of first principles thinking is illustrated in how someone with little experience in the problem domain, but understanding the deep science and math involved, could come up with a reasonable hypothesis that can be expounded upon with help from relevant experts that can perform the actual numerical data analysis.
+In a few sentences, Elon was able to provide a reasonable materials cost analysis with little effort. Most business leaders would have delegated this analysis to the experts, industrial manufacturing engineers after years of college and industry experience.
+
+The power of first principles thinking is illustrated here in this example. Someone with little in-depth experience in the problem domain was able to come up with a reasonable hypothesis by applying deep understanding of science and math involved in a practical fashion. The hypothesis can then be refined upon with help from relevant experts using numerical analysis based on concrete evidence.
 
 In the remainder of this article, we'll look at more specific examples in software and life that showcase how first principles thinking work in practice, and how it ends up being an incredibly valuable way of thinking.
 
@@ -51,7 +55,7 @@ A more advanced technique exists with first principles thinking. When you think 
 
 If you keep thinking this way, eventually you also learn how to break down problems into their fundamental units. Let's take an example problem, a common thing that all of us deals with at some point in our life: how do I lose weight?
 
-It's simple. Scientific evidence shows that, for the average person (this is important to note), losing weight is about living a healthier lifestyle, specifically, the following principles:
+It's simple. Scientific evidence shows that, for the average person (an important note here is that not all bodies work the same), losing weight is about living a healthier lifestyle, specifically, the following principles:
 
 1. Eating and sleeping better, with less caloric intake
 2. Exercising more, to increase calories burned
@@ -83,7 +87,9 @@ When you start breaking down problems into fundamental units, you'll see that th
 - Large parts of computer science teaches you about how to solve problems efficiently. Problem solving is a huge chunk of our lives, and a lot of programming techniques are applicable to real life situations.
 - Mathematical patterns tends to repeat itself in different parts of the real world. It is only up to the keen observer to realize the significant of this.
 
-There are a lot of parallels that can be made everywhere in life. The most interesting ones are perhaps places where humans have spent a lot of time thinking about and continue advancing in: math, science, music, art, philosophy, and language. A conjecture here is that the most successful scientists, innovators are often ones that can master cross-disciplinary studies and applies the lessons from one area to another.
+There are a lot of parallels that can be made everywhere in life. The most interesting ones are perhaps places where humans have spent a lot of time thinking about and continue advancing in: math, science, music, art, philosophy, and language. A conjecture here is as follows:
+
+Often, the most successful scientists, innovators are ones that can master cross-disciplinary studies and applies the lessons from one area to another.
 
 ## First principles thinking leads to breakthrough designs
 
@@ -107,21 +113,21 @@ Constructive criticism of ideas is an important skill in real life, especially i
 
 In contrast, when writing general-purpose application software, engineers often don't need to think about the hard computer science tradeoffs that arises, because they don't matter in practice. Most engineers can get away with less precise thinking. The users won't notice any difference after all. With that in mind, there is less of a desire for certain engineers to criticize ideas. After all, new ideas come up all the time, and who is to judge whether one is better than the other?
 
-The idea of doing what is absolutely necessary to appease the user is indeed correct in most places. However, formalism and rigor are also needed in sufficiently sophisticated areas, and in areas where the design needs to be stretched to the limit -- which usually means, withstand the test of time. A common example here would be internal code architecture or design. This is a sophisticated and abstract area. It is important to know what tradeoffs you are trying to optimize for when you design foundational components. Internal code architecture or design is also a place where is often stretched to the limit. After all, any good software will stay around for years, and with all this time and number of changes, the design will be put to test of time.
+The idea of doing what is absolutely necessary to appease the user is indeed correct in most places. However, formalism and rigor are also needed in sufficiently sophisticated areas, and in areas where the design needs to be stretched to the limit -- which usually means, withstanding the test of time and changing requirements. A common example here would be internal code architecture or design. This is a sophisticated and abstract area. It is important to know what tradeoffs you are trying to optimize for when you design foundational components. Internal code architecture or design is also a place where is often stretched to the limit. After all, any good software will stay around for years, and with all this time and number of changes, the design will be put to test of time.
 
-When ideas are cross-checked with understanding by first building up from first principles for the domain, one can easily deduce whether the idea is sound, or needs modification. The challenge here perhaps, to a highly trained software engineer, is understanding how and what first principles apply in the problem domain. The first principles of computer science often can't be directly translated the first principles in a given problem domain. Some of them may not be translatable at all. Thus, understanding the new problem domain is often required.
+When ideas are cross-checked with understanding by first building up from first principles for the domain, one can easily deduce whether the idea is sound, or needs modification. The challenge here perhaps, to a highly trained software engineer, is understanding what first principles exist in the problem domain. This is often a mixture of formal science, and informal observations. After all, the first principles of computer science do not translate directly to the first principles in a given real-world problem domain. There are human factors at play here that provides bouding of the problem. Thus, understanding the new problem domain is often required.
 
 If you are able to master a problem domain, and build first principles thinking in that domain, you end up being the expert that everyone naturally consults before making any decisions in the problem space. More often than not, you'll be accurate in your analyses and conclusions.
 
 ## Final advice
 
-As a word of caution, first principles thinking isn't for everyone -- our brains work very differently. For thinkers that do not resonate well with deep logical thoughts, a simpler and more practical advice is as follows: distill and keep to heart, facts, principles, ideas, that you hold to be true, and try to think about them when someone discusses a new idea with you. Try to think how the new idea works -- or doesn't work with what you know.
+As a word of caution, first principles thinking isn't for everyone -- our brains work very differently. For thinkers that do not resonate well with deep logical thoughts, a simpler and more practical advice is as follows: keep to your heart facts, principles, ideas, that you hold to be true, and try to think about them when someone discusses a new idea with you. Try to think how the new idea works -- or doesn't work with what you know.
 
 For the logical thinkers, first principles thinking is an extremely powerful tool, but also understand that other tools exist that may be more attractive towards solution formulation. First principles thinking is most useful in solving deeply complex problem domains. Keep this in your tool belt when you need to go deep into areas, and want a lifeline attached.
 
 For software engineers, when designing new application software, always consider whether a design is needed before making code changes. Certain changes do not require them. Consider whether the design will hold the test of time, if it needs to. First principles thinking may help here.
 
-Finally, the real-world examples in this blogpost may not resonate with you. This is not your fault, but a fault of the author. If you still find the idea interesting, I'd recommend looking for other sources that may resonate better<sup>1</sup>.
+Finally, the real-world examples in this blogpost may not resonate with you. This is not a fault of the reader, but a fault of the author. If you still find some parts of the idea idea interesting, I'd recommend looking for other sources that may resonate better<sup>1</sup>. It also goes without saying that understanding and practicing abstract thought processes are harder said than done. With that in mind, the final advice I'll leave with you is to capture ideas that resonate with you and revisit these ideas or this post when the time is right.
 
 <i>Footnote: I'm always looking for feedback and topics my readers might be interested in. If you'd like to contact me, my Twitter handle is [weikanglim](https://twitter.com/weikanglim).</i>
 
