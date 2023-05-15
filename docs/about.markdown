@@ -14,4 +14,10 @@ For those interested about background:
 
 I graduated 2015 with a bachelor's degree in Physics and Computer Science, with a minor in Mathematics from North Dakota State University. I obtained my master's degree (online) in Computer Science from University of Illinois Urbana-Champaign in 2020. I grew up on the tropical Penang island of Malaysia. 
 
+I was fortunate enough to work on some interesting soft matter research during my undergraduate years, under the supervision of Dr. Alan Denton at the NDSU Physics Department. The research culminated in a few published papers, where we studied colloid/nanoparticle-polymer mixtures by using Monte-Carlo based simulations, exploiting the coarse-grained geometric representation of poylmers as random walks in 3D space:
+
+- [Influence of polymer shape on depletion potentials and crowding in colloid–polymer mixtures, 2016](https://pubs.rsc.org/en/content/articlepdf/2016/sm/c5sm02863a)
+- [Depletion-induced forces and crowding in polymer-nanoparticle mixtures: Role of polymer shape fluctuations and penetrability, 2015](https://arxiv.org/pdf/1601.00031)
+- [Polymer crowding and shape distributions in polymer-nanoparticle mixtures, 2014](https://arxiv.org/pdf/1410.6559)
+
 Find me on GitHub or Twitter by clicking on the links at the bottom.
