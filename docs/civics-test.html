@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Citizenship Test Flash Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .answer {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            white-space: pre-line;  /* This will preserve line breaks */
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>US Citizenship Test</h1>
+        <div class="question" id="question"></div>
+        <div class="answer" id="answer"></div>
+        <button id="showAnswer">Show Answer</button>
+    </div>
+
+    <script>
+        // Your questions array goes here
+        const questions = [
+    { q: "What is the supreme law of the land?", a: "• the Constitution" },
+    { q: "What does the Constitution do?", a: "• sets up the government\n• defines the government\n• protects basic rights of Americans" },
+    { q: "The idea of self-government is in the first three words of the Constitution. What are these words?", a: "• We the People" },
+    { q: "What is an amendment?", a: "• a change (to the Constitution)\n• an addition (to the Constitution)" },
+    { q: "What do we call the first ten amendments to the Constitution?", a: "• the Bill of Rights" },
+    { q: "What is one right or freedom from the First Amendment?", a: "• speech\n• religion\n• assembly\n• press\n• petition the government" },
+    { q: "How many amendments does the Constitution have?", a: "• twenty-seven (27)" },
+    { q: "What did the Declaration of Independence do?", a: "• announced our independence (from Great Britain)\n• declared our independence (from Great Britain)\n• said that the United States is free (from Great Britain)" },
+    { q: "What are two rights in the Declaration of Independence?", a: "• life\n• liberty\n• pursuit of happiness" },
+    { q: "What is freedom of religion?", a: "• You can practice any religion, or not practice a religion." },
+    { q: "What is the economic system in the United States?", a: "• capitalist economy\n• market economy" },
+    { q: "What is the \"rule of law\"?", a: "• Everyone must follow the law.\n• Leaders must obey the law.\n• Government must obey the law.\n• No one is above the law.\n" },
+    { q: "Name one branch or part of the government.", a: "• Congress\n• legislative\n• President\n• executive\n• the courts\n• judicial" },
+    { q: "What stops one branch of government from becoming too powerful?", a: "• checks and balances\n• separation of powers" },
+    { q: "Who is in charge of the executive branch?", a: "• the President" },
+    { q: "Who makes federal laws?", a: "• Congress\n• Senate and House (of Representatives)\n• (U.S• or national) legislature" },
+    { q: "What are the two parts of the U.S. Congress?", a: "• the Senate and House (of Representatives)" },
+    { q: "How many U.S. Senators are there?", a: "• one hundred (100)" },
+    { q: "We elect a U.S. Senator for how many years?", a: "• six (6)" },
+    { q: "Who is one of your state's U.S. Senators now?", a: "• Patty Murray\n• Martha Cantwell" },
+    { q: "The House of Representatives has how many voting members?", a: "• four hundred thirty-five (435)" },
+    { q: "We elect a U.S. Representative for how many years?", a: "• two (2)" },
+    { q: "Name your U.S. Representative.", a: "• Suzan Delbene" },
+    { q: "Who does a U.S. Senator represent?", a: "• all people of the state" },
+    { q: "Why do some states have more Representatives than other states?", a: "• (because of) the state's population\n• (because) they have more people\n• (because) some states have more people" },
+    { q: "We elect a President for how many years?", a: "• four (4)" },
+    { q: "In what month do we vote for President?", a: "• November" },
+    { q: "What is the name of the President of the United States now?", a: "• Joe Biden" },
+    { q: "What is the name of the Vice President of the United States now?", a: "• Kamala Haris" },
+    { q: "If the President can no longer serve, who becomes President?", a: "• the Vice President" },
+    { q: "If both the President and the Vice President can no longer serve, who becomes President?", a: "• the Speaker of the House" },
+    { q: "Who is the Commander in Chief of the military?", a: "• the President" },
+    { q: "Who signs bills to become laws?", a: "• the President" },
+    { q: "Who vetoes bills?", a: "• the President" },
+    { q: "What does the President's Cabinet do?", a: "• advises the President" },
+    { q: "What are two Cabinet-level positions?", a: "• Secretary of Agriculture\n• Secretary of Commerce\n• Secretary of Defense\n• Secretary of Education\n• Secretary of Energy\n• Secretary of Health and Human Services\n• Secretary of Homeland Security\n• Secretary of Housing and Urban Development\n• Secretary of the Interior\n• Secretary of Labor\n• Secretary of State\n• Secretary of Transportation\n• Secretary of the Treasury\n• Secretary of Veterans Affairs\n• Attorney General\n• Vice President" },
+    { q: "What does the judicial branch do?", a: "• reviews laws\n• explains laws\n• resolves disputes (disagreements)\n• decides if a law goes against the Constitution" },
+    { q: "What is the highest court in the United States?", a: "• the Supreme Court" },
+    { q: "How many justices are on the Supreme Court?", a: "• Visit uscis.gov/citizenship/testupdates for the number of justices on the Supreme Court." },
+    { q: "Who is the Chief Justice of the United States now?", a: "• Visit uscis.gov/citizenship/testupdates for the name of the Chief Justice of the United States." },
+    { q: "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?", a: "• to print money\n• to declare war\n• to create an army\n• to make treaties" },
+    { q: "Under our Constitution, some powers belong to the states. What is one power of the states?", a: "• provide schooling and education\n• provide protection (police)\n• provide safety (fire departments)\n• give a driver's license\n• approve zoning and land use" },
+    { q: "Who is the Governor of your state now?", a: "• Jay Inslee" },
+    { q: "What is the capital of your state?", a: "• Olympia" },
+    { q: "What are the two major political parties in the United States?", a: "• Democratic and Republican" },
+    { q: "What is the political party of the President now?", a: "• Democrat" },
+    { q: "What is the name of the Speaker of the House of Representatives now?", a: "• Mike Johnson" },
+    { q: "There are four amendments to the Constitution about who can vote. Describe one of them.", a: "• Citizens eighteen (18) and older (can vote).\n• You don't have to pay (a poll tax) to vote.\n• Any citizen can vote• (Women and men can vote.)\n• A male citizen of any race (can vote)." },
+    { q: "What is one responsibility that is only for United States citizens?", a: "• serve on a jury\n• vote in a federal election" },
+    { q: "Name one right only for United States citizens.", a: "• vote in a federal election\n• run for federal office" },
+    { q: "What are two rights of everyone living in the United States?", a: "• freedom of expression\n• freedom of speech\n• freedom of assembly\n• freedom to petition the government\n• freedom of religion\n• the right to bear arms" },
+    { q: "What do we show loyalty to when we say the Pledge of Allegiance?", a: "• the United States\n• the flag" },
+    { q: "What is one promise you make when you become a United States citizen?", a: "• give up loyalty to other countries\n• defend the Constitution and laws of the United States\n• obey the laws of the United States\n• serve in the U.S• military (if needed)\n• serve (do important work for) the nation (if needed)\n• be loyal to the United States" },
+    { q: "How old do citizens have to be to vote for President?", a: "• eighteen (18) and older" },
+    { q: "What are two ways that Americans can participate in their democracy?", a: "• vote\n• join a political party\n• help with a campaign\n• join a civic group\n• join a community group\n• give an elected official your opinion on an issue\n• call Senators and Representatives\n• publicly support or oppose an issue or policy\n• run for office\n• write to a newspaper" },
+    { q: "When is the last day you can send in federal income tax forms?", a: "• April 15" },
+    { q: "When must all men register for the Selective Service?", a: "• at age eighteen (18)\n• between eighteen (18) and twenty-six (26)" },
+    { q: "What is one reason colonists came to America?", a: "• freedom\n• political liberty\n• religious freedom\n• economic opportunity\n• practice their religion\n• escape persecution" },
+    { q: "Who lived in America before the Europeans arrived?", a: "• American Indians\n• Native Americans" },
+    { q: "What group of people was taken to America and sold as slaves?", a: "• Africans\n• people from Africa" },
+    { q: "Why did the colonists fight the British?", a: "• because of high taxes (taxation without representation)\n• because the British army stayed in their houses (boarding, quartering)\n• because they didn't have self-government" },
+    { q: "Who wrote the Declaration of Independence?", a: "• (Thomas) Jefferson" },
+    { q: "When was the Declaration of Independence adopted?", a: "• July 4, 1776" },
+    { q: "There were 13 original states. Name three.", a: "• New Hampshire\n• Massachusetts\n• Rhode Island\n• Connecticut\n• New York\n• New Jersey\n• Pennsylvania\n• Delaware\n• Maryland\n• Virginia\n• North Carolina\n• South Carolina\n• Georgia" },
+    { q: "What happened at the Constitutional Convention?", a: "• The Constitution was written.\n• The Founding Fathers wrote the Constitution." },
+    { q: "When was the Constitution written?", a: "• 1787" },
+    { q: "The Federalist Papers supported the passage of the U.S. Constitution• Name one of the writers.", a: "• (James) Madison\n• (Alexander) Hamilton\n• (John) Jay\n• Publius" },
+    { q: "What is one thing Benjamin Franklin is famous for?", a: "• U.S• diplomat\n• oldest member of the Constitutional Convention\n• first Postmaster General of the United States\n• writer of \"Poor Richard's Almanac\"\n• started the first free libraries" },
+    { q: "Who is the \"Father of Our Country\"?", a: "• (George) Washington" },
+    { q: "Who was the first President?", a: "• (George) Washington\n" },
+    { q: "What territory did the United States buy from France in 1803?", a: "• the Louisiana Territory\n• Louisiana" },
+    { q: "Name one war fought by the United States in the 1800s.", a: "• War of 1812\n• Mexican-American War\n• Civil War\n• Spanish-American War" },
+    { q: "Name the U.S. war between the North and the South.", a: "• the Civil War\n• the War between the States" },
+    { q: "Name one problem that led to the Civil War.", a: "• slavery\n• economic reasons\n• states' rights" },
+    { q: "What was one important thing that Abraham Lincoln did?", a: "• freed the slaves (Emancipation Proclamation)\n• saved (or preserved) the Union\n• led the United States during the Civil War" },
+    { q: "What did the Emancipation Proclamation do?", a: "• freed the slaves\n• freed slaves in the Confederacy\n• freed slaves in the Confederate states\n• freed slaves in most Southern states" },
+    { q: "What did Susan B. Anthony do?", a: "• fought for women's rights\n• fought for civil rights" },
+    { q: "Name one war fought by the United States in the 1900s.", a: "• World War I\n• World War II\n• Korean War\n• Vietnam War\n• (Persian) Gulf War" },
+    { q: "Who was President during World War I?", a: "• (Woodrow) Wilson" },
+    { q: "Who was President during the Great Depression and World War II?", a: "• (Franklin) Roosevelt" },
+    { q: "Who did the United States fight in World War II?", a: "• Japan, Germany, and Italy" },
+    { q: "Before he was President, Eisenhower was a general. What war was he in?", a: "• World War II" },
+    { q: "During the Cold War, what was the main concern of the United States?", a: "• Communism" },
+    { q: "What movement tried to end racial discrimination?", a: "• civil rights (movement)" },
+    { q: "What did Martin Luther King, Jr. do?", a: "• fought for civil rights\n• worked for equality for all Americans" },
+    { q: "What major event happened on September 11, 2001, in the United States?", a: "• Terrorists attacked the United States." },
+    { q: "Name one American Indian tribe in the United States.", a: "• Cherokee\n• Navajo\n• Sioux\n• Tulalip\n• Spokane\n• Suquamish" },
+    { q: "Name one of the two longest rivers in the United States.", a: "• Missouri (River)\n• Mississippi (River)" },
+    { q: "What ocean is on the West Coast of the United States?", a: "• Pacific (Ocean)" },
+    { q: "What ocean is on the East Coast of the United States?", a: "• Atlantic (Ocean)" },
+    { q: "Name one U.S. territory.", a: "• Puerto Rico\n• U.S• Virgin Islands\n• American Samoa\n• Northern Mariana Islands\n• Guam" },
+    { q: "Name one state that borders Canada.", a: "• Maine\n• New Hampshire\n• Vermont\n• New York\n• Pennsylvania\n• Ohio\n• Michigan\n• Minnesota\n• North Dakota\n• Montana\n• Idaho\n• Washington\n• Alaska" },
+    { q: "Name one state that borders Mexico.", a: "• California\n• Arizona\n• New Mexico\n• Texas" },
+    { q: "What is the capital of the United States?", a: "• Washington, D.C." },
+    { q: "Where is the Statue of Liberty?", a: "• New York (Harbor)\n• Liberty Island\n[Also acceptable are New Jersey, near New York City, and on the Hudson (River).]\n" },
+    { q: "Why does the flag have 13 stripes?", a: "• because there were 13 original colonies\n• because the stripes represent the original colonies" },
+    { q: "Why does the flag have 50 stars?", a: "• because there is one star for each state\n• because each star represents a state\n• because there are 50 states" },
+    { q: "What is the name of the national anthem?", a: "• The Star-Spangled Banner" },
+    { q: "When do we celebrate Independence Day?", a: "• July 4" },
+    { q: "Name two national U.S. holidays.", a: "• New Year's Day\n• Martin Luther King, Jr• Day\n• Presidents' Day\n• Memorial Day\n• Independence Day\n• Labor Day\n• Columbus Day\n• Veterans Day\n• Thanksgiving\n• Christmas" },
+];
+
+
+        let availableQuestions = [...questions];
+        const questionEl = document.getElementById('question');
+        const answerEl = document.getElementById('answer');
+        const showAnswerBtn = document.getElementById('showAnswer');
+
+        function getRandomQuestion() {
+            if (availableQuestions.length === 0) {
+                availableQuestions = [...questions];
+            }
+            const index = Math.floor(Math.random() * availableQuestions.length);
+            return availableQuestions.splice(index, 1)[0];
+        }
+
+        function loadQuestion() {
+            const question = getRandomQuestion();
+            questionEl.textContent = question.q;
+            answerEl.textContent = question.a;
+            answerEl.style.display = 'none';
+            answerEl.style.opacity = '0';
+            showAnswerBtn.textContent = 'Show Answer';
+        }
+
+        showAnswerBtn.addEventListener('click', function() {
+            if (answerEl.style.display === 'none') {
+                answerEl.style.display = 'block';
+                setTimeout(() => {
+                    answerEl.style.opacity = '1';
+                }, 10);
+                showAnswerBtn.textContent = 'Next Question';
+            } else {
+                loadQuestion();
+            }
+        });
+
+        loadQuestion();
+    </script>
+</body>
+</html>
